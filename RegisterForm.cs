@@ -88,7 +88,7 @@ namespace WeCar
                 txtErrPassConfirm.Text = "Password is not mess";
 
             }
-            else 
+            else
             {
                 Popup popup = new Popup();
                 popup.Show();
@@ -127,6 +127,16 @@ namespace WeCar
         private void RegisterForm_MouseUp(object sender, MouseEventArgs e)
         {
             isDragging = false;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

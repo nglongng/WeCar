@@ -17,3 +17,11 @@ D:\Wecar\WeCar\obj\Debug\net6.0-windows\ref\WeCar.dll
 D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.LoginForm.resources
 D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.RegisterForm.resources
 D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.Popup.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.MainScreen.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.Car_Order.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.Customer.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.Schedule.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.User_Control.carManagement.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.User_Control.Customer.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.User_Control.Order.resources
+D:\Wecar\WeCar\obj\Debug\net6.0-windows\WeCar.User_Control.Schedule.resources

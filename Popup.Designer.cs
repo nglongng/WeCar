@@ -63,6 +63,7 @@
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
+            BackgroundImage = Properties.Resources.carlogo;
             ClientSize = new Size(248, 130);
             Controls.Add(button1);
             Controls.Add(label1);

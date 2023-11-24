@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
             pictureBox1 = new PictureBox();
             txtErrInvalid = new Label();
             label5 = new Label();
@@ -56,12 +55,13 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Image = Properties.Resources.carlogo;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(280, 472);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // txtErrInvalid
             // 
@@ -165,6 +165,7 @@
             label3.Size = new Size(74, 24);
             label3.TabIndex = 22;
             label3.Text = "Username:";
+            label3.Click += label3_Click;
             // 
             // panel1
             // 
