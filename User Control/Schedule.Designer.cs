@@ -29,41 +29,34 @@
         private void InitializeComponent()
         {
             panel4 = new Panel();
-            dateTimePicker1 = new DateTimePicker();
-            comboBox2 = new ComboBox();
-            label15 = new Label();
-            textBox5 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            label16 = new Label();
             label17 = new Label();
-            label18 = new Label();
-            label19 = new Label();
-            label20 = new Label();
             button1 = new Button();
             button3 = new Button();
             button4 = new Button();
             button5 = new Button();
             textBox9 = new TextBox();
-            textBox1 = new TextBox();
+            label20 = new Label();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel4
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
-            panel4.Controls.Add(dateTimePicker1);
-            panel4.Controls.Add(textBox1);
-            panel4.Controls.Add(comboBox2);
-            panel4.Controls.Add(label15);
-            panel4.Controls.Add(textBox5);
-            panel4.Controls.Add(textBox7);
-            panel4.Controls.Add(textBox8);
-            panel4.Controls.Add(label16);
-            panel4.Controls.Add(label17);
-            panel4.Controls.Add(label18);
-            panel4.Controls.Add(label19);
+            panel4.Controls.Add(label5);
+            panel4.Controls.Add(label4);
+            panel4.Controls.Add(label3);
+            panel4.Controls.Add(label2);
+            panel4.Controls.Add(label1);
             panel4.Controls.Add(label20);
+            panel4.Controls.Add(dataGridView1);
+            panel4.Controls.Add(label17);
             panel4.Controls.Add(button1);
             panel4.Controls.Add(button3);
             panel4.Controls.Add(button4);
@@ -72,66 +65,8 @@
             panel4.ForeColor = SystemColors.ControlText;
             panel4.Location = new Point(0, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1051, 344);
+            panel4.Size = new Size(947, 589);
             panel4.TabIndex = 87;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Location = new Point(6, 170);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(292, 26);
-            dateTimePicker1.TabIndex = 126;
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(304, 296);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(115, 27);
-            comboBox2.TabIndex = 124;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.ForeColor = SystemColors.ControlLightLight;
-            label15.Location = new Point(6, 212);
-            label15.Name = "label15";
-            label15.Size = new Size(54, 19);
-            label15.TabIndex = 121;
-            label15.Text = "Địa chỉ";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(328, 170);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(292, 26);
-            textBox5.TabIndex = 119;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(6, 102);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(292, 26);
-            textBox7.TabIndex = 117;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(328, 101);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(292, 26);
-            textBox8.TabIndex = 112;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label16.ForeColor = SystemColors.ControlLightLight;
-            label16.Location = new Point(328, 73);
-            label16.Name = "label16";
-            label16.Size = new Size(119, 19);
-            label16.TabIndex = 111;
-            label16.Text = "Tên Khách Hàng";
             // 
             // label17
             // 
@@ -144,42 +79,9 @@
             label17.TabIndex = 110;
             label17.Text = "Quản lý lịch trình";
             // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label18.ForeColor = SystemColors.ControlLightLight;
-            label18.Location = new Point(6, 142);
-            label18.Name = "label18";
-            label18.Size = new Size(75, 19);
-            label18.TabIndex = 103;
-            label18.Text = "Ngày sinh";
-            // 
-            // label19
-            // 
-            label19.AutoSize = true;
-            label19.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label19.ForeColor = SystemColors.ControlLightLight;
-            label19.Location = new Point(328, 142);
-            label19.Name = "label19";
-            label19.Size = new Size(95, 19);
-            label19.TabIndex = 101;
-            label19.Text = "Số Điện thoại";
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label20.ForeColor = SystemColors.ControlLightLight;
-            label20.Location = new Point(6, 74);
-            label20.Name = "label20";
-            label20.Size = new Size(75, 19);
-            label20.TabIndex = 100;
-            label20.Text = "Số CMND";
-            // 
             // button1
             // 
-            button1.Location = new Point(620, 295);
+            button1.Location = new Point(499, 296);
             button1.Name = "button1";
             button1.Size = new Size(59, 26);
             button1.TabIndex = 79;
@@ -189,7 +91,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(555, 295);
+            button3.Location = new Point(434, 296);
             button3.Name = "button3";
             button3.Size = new Size(59, 26);
             button3.TabIndex = 78;
@@ -199,7 +101,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(490, 295);
+            button4.Location = new Point(369, 296);
             button4.Name = "button4";
             button4.Size = new Size(59, 26);
             button4.TabIndex = 77;
@@ -209,7 +111,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(425, 295);
+            button5.Location = new Point(304, 296);
             button5.Name = "button5";
             button5.Size = new Size(59, 26);
             button5.TabIndex = 76;
@@ -224,12 +126,81 @@
             textBox9.Size = new Size(292, 26);
             textBox9.TabIndex = 74;
             // 
-            // textBox1
+            // label20
             // 
-            textBox1.Location = new Point(6, 243);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 26);
-            textBox1.TabIndex = 125;
+            label20.AutoSize = true;
+            label20.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.ForeColor = SystemColors.ControlLightLight;
+            label20.Location = new Point(6, 275);
+            label20.Name = "label20";
+            label20.Size = new Size(86, 19);
+            label20.TabIndex = 134;
+            label20.Text = "Mã hóa đơn";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(583, 56);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 19);
+            label1.TabIndex = 135;
+            label1.Text = "Loại xe";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(0, 350);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 28;
+            dataGridView1.Size = new Size(947, 236);
+            dataGridView1.TabIndex = 133;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(583, 109);
+            label2.Name = "label2";
+            label2.Size = new Size(96, 19);
+            label2.TabIndex = 136;
+            label2.Text = "Ngày thuê xe";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(583, 167);
+            label3.Name = "label3";
+            label3.Size = new Size(84, 19);
+            label3.TabIndex = 137;
+            label3.Text = "Ngày trả xe";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ControlLightLight;
+            label4.Location = new Point(583, 215);
+            label4.Name = "label4";
+            label4.Size = new Size(59, 19);
+            label4.TabIndex = 138;
+            label4.Text = "Dịch vụ";
+            label4.Click += label4_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ControlLightLight;
+            label5.Location = new Point(815, 56);
+            label5.Name = "label5";
+            label5.Size = new Size(54, 19);
+            label5.TabIndex = 139;
+            label5.Text = "Loại xe";
             // 
             // Schedule
             // 
@@ -238,31 +209,28 @@
             BackColor = Color.Black;
             Controls.Add(panel4);
             Name = "Schedule";
-            Size = new Size(1051, 552);
+            Size = new Size(947, 589);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel4;
-        private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
-        private Label label15;
-        private TextBox textBox5;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private Label label16;
         private Label label17;
-        private Label label18;
-        private Label label19;
-        private Label label20;
         private Button button1;
         private Button button3;
         private Button button4;
         private Button button5;
         private TextBox textBox9;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Label label20;
+        private DataGridView dataGridView1;
+        private Label label5;
     }
 }

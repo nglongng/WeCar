@@ -16,5 +16,20 @@ namespace WeCar.User_Control
         {
             InitializeComponent();
         }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox13_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

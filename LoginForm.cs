@@ -22,8 +22,9 @@ namespace WeCar
             }
             else if (usname.Equals("admin") && pass.Equals("123"))
             {
-                RegisterForm registerForm = new RegisterForm();
-                registerForm.Show();
+                MainForm mainForm = new MainForm();
+                mainForm.Show();
+
             }
             else
             {
@@ -155,6 +156,11 @@ namespace WeCar
         private void RegisterForm_MouseUp(object sender, MouseEventArgs e)
         {
             isDragging = false;
+        }
+
+        private void inputUserName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

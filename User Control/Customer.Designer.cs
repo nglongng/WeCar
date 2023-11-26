@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             panel4 = new Panel();
+            dateTimePicker1 = new DateTimePicker();
+            textBox1 = new TextBox();
             comboBox2 = new ComboBox();
+            label15 = new Label();
             textBox5 = new TextBox();
             textBox7 = new TextBox();
             textBox8 = new TextBox();
@@ -43,11 +46,14 @@
             button4 = new Button();
             button5 = new Button();
             textBox9 = new TextBox();
-            label15 = new Label();
-            textBox1 = new TextBox();
-            listView2 = new ListView();
-            dateTimePicker1 = new DateTimePicker();
+            dataGridView1 = new DataGridView();
+            CMND = new DataGridViewTextBoxColumn();
+            tenkh = new DataGridViewTextBoxColumn();
+            ngaysinh = new DataGridViewTextBoxColumn();
+            sdt = new DataGridViewTextBoxColumn();
+            diachi = new DataGridViewTextBoxColumn();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel4
@@ -73,8 +79,22 @@
             panel4.ForeColor = SystemColors.ControlText;
             panel4.Location = new Point(3, 0);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1051, 344);
+            panel4.Size = new Size(941, 344);
             panel4.TabIndex = 86;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Location = new Point(6, 170);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(292, 26);
+            dateTimePicker1.TabIndex = 126;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(6, 243);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(292, 26);
+            textBox1.TabIndex = 125;
             // 
             // comboBox2
             // 
@@ -83,6 +103,18 @@
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(115, 27);
             comboBox2.TabIndex = 124;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label15.ForeColor = SystemColors.ControlLightLight;
+            label15.Location = new Point(6, 212);
+            label15.Name = "label15";
+            label15.Size = new Size(54, 19);
+            label15.TabIndex = 121;
+            label15.Text = "Địa chỉ";
             // 
             // textBox5
             // 
@@ -206,51 +238,57 @@
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(292, 26);
             textBox9.TabIndex = 74;
+            textBox9.Text = "Tìm kiếm";
+            textBox9.TextChanged += textBox9_TextChanged;
             // 
-            // label15
+            // dataGridView1
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label15.ForeColor = SystemColors.ControlLightLight;
-            label15.Location = new Point(6, 212);
-            label15.Name = "label15";
-            label15.Size = new Size(54, 19);
-            label15.TabIndex = 121;
-            label15.Text = "Địa chỉ";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { CMND, tenkh, ngaysinh, sdt, diachi });
+            dataGridView1.Location = new Point(0, 353);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 28;
+            dataGridView1.Size = new Size(944, 236);
+            dataGridView1.TabIndex = 113;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // textBox1
+            // CMND
             // 
-            textBox1.Location = new Point(6, 243);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 26);
-            textBox1.TabIndex = 125;
+            CMND.HeaderText = "Số CMND";
+            CMND.Name = "CMND";
             // 
-            // listView2
+            // tenkh
             // 
-            listView2.Location = new Point(3, 333);
-            listView2.Name = "listView2";
-            listView2.Size = new Size(1051, 219);
-            listView2.TabIndex = 87;
-            listView2.UseCompatibleStateImageBehavior = false;
+            tenkh.HeaderText = "Tên Khách Hàng";
+            tenkh.Name = "tenkh";
             // 
-            // dateTimePicker1
+            // ngaysinh
             // 
-            dateTimePicker1.Location = new Point(6, 170);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(292, 26);
-            dateTimePicker1.TabIndex = 126;
+            ngaysinh.HeaderText = "Ngày sinh";
+            ngaysinh.Name = "ngaysinh";
+            // 
+            // sdt
+            // 
+            sdt.HeaderText = "Số điện thoại";
+            sdt.Name = "sdt";
+            // 
+            // diachi
+            // 
+            diachi.HeaderText = "Địa chỉ";
+            diachi.Name = "diachi";
             // 
             // Customer
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            Controls.Add(listView2);
+            Controls.Add(dataGridView1);
             Controls.Add(panel4);
             Name = "Customer";
-            Size = new Size(1051, 552);
+            Size = new Size(947, 589);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -273,7 +311,12 @@
         private Button button4;
         private Button button5;
         private TextBox textBox9;
-        private ListView listView2;
         private DateTimePicker dateTimePicker1;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn CMND;
+        private DataGridViewTextBoxColumn tenkh;
+        private DataGridViewTextBoxColumn ngaysinh;
+        private DataGridViewTextBoxColumn sdt;
+        private DataGridViewTextBoxColumn diachi;
     }
 }

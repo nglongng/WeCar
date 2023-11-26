@@ -85,6 +85,7 @@
             inputUserName.Name = "inputUserName";
             inputUserName.Size = new Size(294, 18);
             inputUserName.TabIndex = 2;
+            inputUserName.TextChanged += inputUserName_TextChanged;
             inputUserName.KeyPress += inputUserName_KeyPress;
             // 
             // pictureBox1
