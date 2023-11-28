@@ -1,3 +1,4 @@
+using WeCar.Controller;
 namespace WeCar
 {
     public partial class LoginForm : Form
@@ -20,16 +21,38 @@ namespace WeCar
             {
                 txtErrPass.Text = "Please enter your password";
             }
-            else if (usname.Equals("admin") && pass.Equals("123"))
-            {
-                MainForm mainForm = new MainForm();
-                mainForm.Show();
+            else {
 
+                using (var context = new WeCarDbContext())
+                {
+                    var user = context.Employees.Where(e => e.Username == usname).FirstOrDefault();
+                    if(user == null)
+                    {
+                        txtErrInvalid.Text = "Username or password is invalid";
+                    }else
+                    {
+                        if (usname.Equals(user.Username) && pass.Equals(user.Password))
+                        {
+                            Properties.Settings.Default.username = user.Username;
+                            Properties.Settings.Default.role = user.Role;
+                            MainForm mainForm = new MainForm();
+                            mainForm.Show();
+                            this.Hide();
+
+                        }
+                        else
+                        {
+                            txtErrInvalid.Text = "Username or password is invalid";
+                        }
+                    }
+
+                    
+
+                }
+
+                    
             }
-            else
-            {
-                txtErrInvalid.Text = "Username or password is invalid";
-            }
+            
 
         }
 

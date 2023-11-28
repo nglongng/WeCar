@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             panel4 = new Panel();
-            radioButton3 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            selectType = new ComboBox();
+            fuelGroup = new Panel();
+            F02 = new RadioButton();
+            F01 = new RadioButton();
+            F03 = new RadioButton();
+            inputPrice = new TextBox();
+            label1 = new Label();
             label2 = new Label();
-            comboBox2 = new ComboBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            inputBrand = new TextBox();
+            inputCarId = new TextBox();
+            inputCarName = new TextBox();
             label16 = new Label();
             label17 = new Label();
             label18 = new Label();
@@ -45,36 +47,26 @@
             label20 = new Label();
             button1 = new Button();
             button3 = new Button();
-            button4 = new Button();
+            btnAdd = new Button();
             button5 = new Button();
-            textBox9 = new TextBox();
+            inputBox = new TextBox();
             dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            idxe = new DataGridViewTextBoxColumn();
-            tenxe = new DataGridViewTextBoxColumn();
-            loaixe = new DataGridViewTextBoxColumn();
-            hangxe = new DataGridViewTextBoxColumn();
-            nhienlieu = new DataGridViewTextBoxColumn();
-            giathue = new DataGridViewTextBoxColumn();
             panel4.SuspendLayout();
+            fuelGroup.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel4
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
-            panel4.Controls.Add(textBox1);
+            panel4.Controls.Add(selectType);
+            panel4.Controls.Add(fuelGroup);
+            panel4.Controls.Add(inputPrice);
             panel4.Controls.Add(label1);
-            panel4.Controls.Add(radioButton3);
-            panel4.Controls.Add(radioButton2);
-            panel4.Controls.Add(radioButton1);
             panel4.Controls.Add(label2);
-            panel4.Controls.Add(comboBox2);
-            panel4.Controls.Add(textBox5);
-            panel4.Controls.Add(textBox6);
-            panel4.Controls.Add(textBox7);
-            panel4.Controls.Add(textBox8);
+            panel4.Controls.Add(inputBrand);
+            panel4.Controls.Add(inputCarId);
+            panel4.Controls.Add(inputCarName);
             panel4.Controls.Add(label16);
             panel4.Controls.Add(label17);
             panel4.Controls.Add(label18);
@@ -82,270 +74,269 @@
             panel4.Controls.Add(label20);
             panel4.Controls.Add(button1);
             panel4.Controls.Add(button3);
-            panel4.Controls.Add(button4);
+            panel4.Controls.Add(btnAdd);
             panel4.Controls.Add(button5);
-            panel4.Controls.Add(textBox9);
-            panel4.ForeColor = SystemColors.ControlText;
+            panel4.Controls.Add(inputBox);
+            panel4.ForeColor = SystemColors.ActiveCaptionText;
             panel4.Location = new Point(3, 0);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(944, 324);
+            panel4.Size = new Size(826, 256);
             panel4.TabIndex = 85;
             // 
-            // radioButton3
+            // selectType
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.ForeColor = SystemColors.ControlLightLight;
-            radioButton3.Location = new Point(208, 242);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(55, 23);
-            radioButton3.TabIndex = 155;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "Điện";
-            radioButton3.UseVisualStyleBackColor = true;
+            selectType.FormattingEnabled = true;
+            selectType.Location = new Point(29, 137);
+            selectType.Margin = new Padding(3, 2, 3, 2);
+            selectType.Name = "selectType";
+            selectType.Size = new Size(256, 23);
+            selectType.TabIndex = 159;
+            selectType.SelectedIndexChanged += selectType_SelectedIndexChanged;
+            selectType.SelectionChangeCommitted += selectType_SelectionChangeCommitted;
             // 
-            // radioButton2
+            // fuelGroup
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.ForeColor = SystemColors.ControlLightLight;
-            radioButton2.Location = new Point(85, 242);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(90, 23);
-            radioButton2.TabIndex = 154;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Dầu diesel";
-            radioButton2.UseVisualStyleBackColor = true;
+            fuelGroup.Controls.Add(F02);
+            fuelGroup.Controls.Add(F01);
+            fuelGroup.Controls.Add(F03);
+            fuelGroup.Location = new Point(29, 194);
+            fuelGroup.Name = "fuelGroup";
+            fuelGroup.Size = new Size(234, 36);
+            fuelGroup.TabIndex = 158;
             // 
-            // radioButton1
+            // F02
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.ForeColor = SystemColors.ControlLightLight;
-            radioButton1.Location = new Point(6, 242);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(58, 23);
-            radioButton1.TabIndex = 153;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Xăng";
-            radioButton1.UseVisualStyleBackColor = true;
+            F02.AutoSize = true;
+            F02.ForeColor = SystemColors.ControlLightLight;
+            F02.Location = new Point(72, 6);
+            F02.Margin = new Padding(3, 2, 3, 2);
+            F02.Name = "F02";
+            F02.Size = new Size(79, 19);
+            F02.TabIndex = 154;
+            F02.TabStop = true;
+            F02.Text = "Dầu diesel";
+            F02.UseVisualStyleBackColor = true;
+            // 
+            // F01
+            // 
+            F01.AutoSize = true;
+            F01.ForeColor = SystemColors.ControlLightLight;
+            F01.Location = new Point(3, 6);
+            F01.Margin = new Padding(3, 2, 3, 2);
+            F01.Name = "F01";
+            F01.Size = new Size(52, 19);
+            F01.TabIndex = 153;
+            F01.TabStop = true;
+            F01.Text = "Xăng";
+            F01.UseVisualStyleBackColor = true;
+            // 
+            // F03
+            // 
+            F03.AutoSize = true;
+            F03.ForeColor = SystemColors.ControlLightLight;
+            F03.Location = new Point(180, 6);
+            F03.Margin = new Padding(3, 2, 3, 2);
+            F03.Name = "F03";
+            F03.Size = new Size(49, 19);
+            F03.TabIndex = 155;
+            F03.TabStop = true;
+            F03.Text = "Điện";
+            F03.UseVisualStyleBackColor = true;
+            // 
+            // inputPrice
+            // 
+            inputPrice.Location = new Point(311, 190);
+            inputPrice.Margin = new Padding(3, 2, 3, 2);
+            inputPrice.Name = "inputPrice";
+            inputPrice.Size = new Size(256, 23);
+            inputPrice.TabIndex = 157;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(311, 168);
+            label1.Name = "label1";
+            label1.Size = new Size(110, 20);
+            label1.TabIndex = 156;
+            label1.Text = "Giá thuê/Ngày";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(6, 211);
+            label2.Location = new Point(29, 168);
             label2.Name = "label2";
-            label2.Size = new Size(73, 19);
+            label2.Size = new Size(78, 20);
             label2.TabIndex = 140;
             label2.Text = "Nhiên liệu";
             // 
-            // comboBox2
+            // inputBrand
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(304, 296);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(115, 27);
-            comboBox2.TabIndex = 124;
+            inputBrand.Location = new Point(311, 137);
+            inputBrand.Margin = new Padding(3, 2, 3, 2);
+            inputBrand.Name = "inputBrand";
+            inputBrand.Size = new Size(256, 23);
+            inputBrand.TabIndex = 119;
             // 
-            // textBox5
+            // inputCarId
             // 
-            textBox5.Location = new Point(328, 170);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(292, 26);
-            textBox5.TabIndex = 119;
+            inputCarId.Location = new Point(29, 82);
+            inputCarId.Margin = new Padding(3, 2, 3, 2);
+            inputCarId.Name = "inputCarId";
+            inputCarId.Size = new Size(256, 23);
+            inputCarId.TabIndex = 117;
             // 
-            // textBox6
+            // inputCarName
             // 
-            textBox6.Location = new Point(6, 170);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(292, 26);
-            textBox6.TabIndex = 118;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(6, 102);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(292, 26);
-            textBox7.TabIndex = 117;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(328, 101);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(292, 26);
-            textBox8.TabIndex = 112;
-            textBox8.TextChanged += textBox8_TextChanged;
+            inputCarName.Location = new Point(311, 81);
+            inputCarName.Margin = new Padding(3, 2, 3, 2);
+            inputCarName.Name = "inputCarName";
+            inputCarName.Size = new Size(256, 23);
+            inputCarName.TabIndex = 112;
+            inputCarName.TextChanged += textBox8_TextChanged;
             // 
             // label16
             // 
             label16.AutoSize = true;
-            label16.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label16.ForeColor = SystemColors.ControlLightLight;
-            label16.Location = new Point(328, 73);
+            label16.Location = new Point(311, 59);
             label16.Name = "label16";
-            label16.Size = new Size(53, 19);
+            label16.Size = new Size(60, 20);
             label16.TabIndex = 111;
             label16.Text = "Tên Xe";
             // 
             // label17
             // 
             label17.AutoSize = true;
-            label17.Font = new Font("SF Pro Display", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label17.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label17.ForeColor = SystemColors.ControlLightLight;
-            label17.Location = new Point(6, 20);
+            label17.Location = new Point(29, 17);
             label17.Name = "label17";
-            label17.Size = new Size(139, 25);
+            label17.Size = new Size(157, 25);
             label17.TabIndex = 110;
             label17.Text = "Quản lý xe ô tô";
             // 
             // label18
             // 
             label18.AutoSize = true;
-            label18.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label18.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label18.ForeColor = SystemColors.ControlLightLight;
-            label18.Location = new Point(6, 142);
+            label18.Location = new Point(29, 113);
             label18.Name = "label18";
-            label18.Size = new Size(54, 19);
+            label18.Size = new Size(59, 20);
             label18.TabIndex = 103;
             label18.Text = "Loại xe";
             // 
             // label19
             // 
             label19.AutoSize = true;
-            label19.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label19.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label19.ForeColor = SystemColors.ControlLightLight;
-            label19.Location = new Point(328, 142);
+            label19.Location = new Point(311, 113);
             label19.Name = "label19";
-            label19.Size = new Size(63, 19);
+            label19.Size = new Size(68, 20);
             label19.TabIndex = 101;
             label19.Text = "Hãng xe";
             // 
             // label20
             // 
             label20.AutoSize = true;
-            label20.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label20.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label20.ForeColor = SystemColors.ControlLightLight;
-            label20.Location = new Point(6, 74);
+            label20.Location = new Point(29, 59);
             label20.Name = "label20";
-            label20.Size = new Size(44, 19);
+            label20.Size = new Size(50, 20);
             label20.TabIndex = 100;
             label20.Text = "ID Xe";
             // 
             // button1
             // 
-            button1.Location = new Point(620, 295);
+            button1.Location = new Point(482, 236);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(59, 26);
+            button1.Size = new Size(67, 21);
             button1.TabIndex = 79;
-            button1.Text = "Sửa";
+            button1.Text = "Cập nhật";
             button1.TextAlign = ContentAlignment.TopCenter;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button3
             // 
-            button3.Location = new Point(555, 295);
+            button3.Location = new Point(426, 236);
+            button3.Margin = new Padding(3, 2, 3, 2);
             button3.Name = "button3";
-            button3.Size = new Size(59, 26);
+            button3.Size = new Size(52, 21);
             button3.TabIndex = 78;
             button3.Text = "Xóa";
             button3.TextAlign = ContentAlignment.TopCenter;
             button3.UseVisualStyleBackColor = true;
+            button3.Click += handleDelCar;
             // 
-            // button4
+            // btnAdd
             // 
-            button4.Location = new Point(490, 295);
-            button4.Name = "button4";
-            button4.Size = new Size(59, 26);
-            button4.TabIndex = 77;
-            button4.Text = "Thêm";
-            button4.TextAlign = ContentAlignment.TopCenter;
-            button4.UseVisualStyleBackColor = true;
+            btnAdd.Location = new Point(369, 236);
+            btnAdd.Margin = new Padding(3, 2, 3, 2);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(52, 21);
+            btnAdd.TabIndex = 77;
+            btnAdd.Text = "Thêm";
+            btnAdd.TextAlign = ContentAlignment.TopCenter;
+            btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += addBtn_click;
             // 
             // button5
             // 
-            button5.Location = new Point(425, 295);
+            button5.Location = new Point(312, 236);
+            button5.Margin = new Padding(3, 2, 3, 2);
             button5.Name = "button5";
-            button5.Size = new Size(59, 26);
+            button5.Size = new Size(52, 21);
             button5.TabIndex = 76;
             button5.Text = "Tìm";
             button5.TextAlign = ContentAlignment.TopCenter;
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
-            // textBox9
+            // inputBox
             // 
-            textBox9.Location = new Point(6, 297);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(292, 26);
-            textBox9.TabIndex = 74;
+            inputBox.Location = new Point(29, 235);
+            inputBox.Margin = new Padding(3, 2, 3, 2);
+            inputBox.Name = "inputBox";
+            inputBox.Size = new Size(256, 23);
+            inputBox.TabIndex = 74;
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.ActiveCaptionText;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idxe, tenxe, loaixe, hangxe, nhienlieu, giathue });
-            dataGridView1.Location = new Point(0, 350);
+            dataGridView1.Location = new Point(0, 276);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 28;
-            dataGridView1.Size = new Size(944, 236);
+            dataGridView1.Size = new Size(826, 186);
             dataGridView1.TabIndex = 113;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(328, 239);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(292, 26);
-            textBox1.TabIndex = 157;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("SF Pro Display", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(328, 211);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 19);
-            label1.TabIndex = 156;
-            label1.Text = "Giá thuê/Ngày";
-            // 
-            // idxe
-            // 
-            idxe.HeaderText = "ID Xe";
-            idxe.Name = "idxe";
-            // 
-            // tenxe
-            // 
-            tenxe.HeaderText = "Tên xe";
-            tenxe.Name = "tenxe";
-            // 
-            // loaixe
-            // 
-            loaixe.HeaderText = "Loại xe";
-            loaixe.Name = "loaixe";
-            // 
-            // hangxe
-            // 
-            hangxe.HeaderText = "Hãng xe";
-            hangxe.Name = "hangxe";
-            // 
-            // nhienlieu
-            // 
-            nhienlieu.HeaderText = "Loại hiên liệu";
-            nhienlieu.Name = "nhienlieu";
-            // 
-            // giathue
-            // 
-            giathue.HeaderText = "Giá thuê/ngày";
-            giathue.Name = "giathue";
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            dataGridView1.CellMouseClick += dataGridView1_CellMouseClick;
             // 
             // carManagement
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             Controls.Add(dataGridView1);
             Controls.Add(panel4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "carManagement";
-            Size = new Size(947, 589);
+            Size = new Size(829, 465);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            fuelGroup.ResumeLayout(false);
+            fuelGroup.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
@@ -353,11 +344,9 @@
         #endregion
 
         private Panel panel4;
-        private ComboBox comboBox2;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
+        private TextBox inputBrand;
+        private TextBox inputCarId;
+        private TextBox inputCarName;
         private Label label16;
         private Label label17;
         private Label label18;
@@ -365,21 +354,17 @@
         private Label label20;
         private Button button1;
         private Button button3;
-        private Button button4;
+        private Button btnAdd;
         private Button button5;
-        private TextBox textBox9;
-        private RadioButton radioButton1;
+        private TextBox inputBox;
+        private RadioButton F01;
         private Label label2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton2;
+        private RadioButton F03;
+        private RadioButton F02;
         private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private TextBox inputPrice;
         private Label label1;
-        private DataGridViewTextBoxColumn idxe;
-        private DataGridViewTextBoxColumn tenxe;
-        private DataGridViewTextBoxColumn loaixe;
-        private DataGridViewTextBoxColumn hangxe;
-        private DataGridViewTextBoxColumn nhienlieu;
-        private DataGridViewTextBoxColumn giathue;
+        private Panel fuelGroup;
+        private ComboBox selectType;
     }
 }

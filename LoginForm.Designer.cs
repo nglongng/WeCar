@@ -38,8 +38,6 @@
             label4 = new Label();
             panel2 = new Panel();
             inputPassword = new TextBox();
-            linkLabel1 = new LinkLabel();
-            linkLabel2 = new LinkLabel();
             closeBtn = new Button();
             txtErrUserName = new Label();
             txtErrPass = new Label();
@@ -54,7 +52,7 @@
             loginBtn.Cursor = Cursors.Hand;
             loginBtn.FlatAppearance.BorderColor = Color.Lime;
             loginBtn.FlatStyle = FlatStyle.Flat;
-            loginBtn.Font = new Font("Agency FB", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            loginBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             loginBtn.ForeColor = Color.Lime;
             loginBtn.Location = new Point(450, 329);
             loginBtn.Name = "loginBtn";
@@ -79,11 +77,11 @@
             inputUserName.BackColor = SystemColors.InactiveCaptionText;
             inputUserName.BorderStyle = BorderStyle.None;
             inputUserName.Cursor = Cursors.IBeam;
-            inputUserName.Font = new Font("Agency FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            inputUserName.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             inputUserName.ForeColor = SystemColors.Menu;
-            inputUserName.Location = new Point(413, 156);
+            inputUserName.Location = new Point(428, 156);
             inputUserName.Name = "inputUserName";
-            inputUserName.Size = new Size(294, 18);
+            inputUserName.Size = new Size(279, 17);
             inputUserName.TabIndex = 2;
             inputUserName.TextChanged += inputUserName_TextChanged;
             inputUserName.KeyPress += inputUserName_KeyPress;
@@ -101,11 +99,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Agency FB", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Silver;
             label2.Location = new Point(516, 56);
             label2.Name = "label2";
-            label2.Size = new Size(52, 31);
+            label2.Size = new Size(78, 29);
             label2.TabIndex = 5;
             label2.Text = "Login";
             label2.Click += label2_Click;
@@ -121,11 +119,11 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Agency FB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = SystemColors.Control;
             label3.Location = new Point(311, 156);
             label3.Name = "label3";
-            label3.Size = new Size(74, 24);
+            label3.Size = new Size(111, 24);
             label3.TabIndex = 7;
             label3.Text = "Username:";
             label3.Click += label3_Click;
@@ -133,11 +131,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Agency FB", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = SystemColors.Control;
             label4.Location = new Point(311, 224);
             label4.Name = "label4";
-            label4.Size = new Size(74, 24);
+            label4.Size = new Size(106, 24);
             label4.TabIndex = 8;
             label4.Text = "Password:";
             label4.Click += label4_Click;
@@ -155,42 +153,14 @@
             inputPassword.BackColor = SystemColors.InactiveCaptionText;
             inputPassword.BorderStyle = BorderStyle.None;
             inputPassword.Cursor = Cursors.IBeam;
-            inputPassword.Font = new Font("Agency FB", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            inputPassword.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             inputPassword.ForeColor = SystemColors.Menu;
-            inputPassword.Location = new Point(413, 224);
+            inputPassword.Location = new Point(428, 224);
             inputPassword.Name = "inputPassword";
-            inputPassword.Size = new Size(294, 18);
+            inputPassword.Size = new Size(279, 17);
             inputPassword.TabIndex = 7;
             inputPassword.TextChanged += textBox2_TextChanged_1;
             inputPassword.KeyPress += inputPassword_KeyPress;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = SystemColors.ActiveCaptionText;
-            linkLabel1.Font = new Font("Agency FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel1.LinkColor = Color.FromArgb(224, 224, 224);
-            linkLabel1.Location = new Point(516, 284);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(67, 17);
-            linkLabel1.TabIndex = 9;
-            linkLabel1.TabStop = true;
-            linkLabel1.Text = "Forgot password";
-            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
-            // 
-            // linkLabel2
-            // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.BackColor = SystemColors.ActiveCaptionText;
-            linkLabel2.Font = new Font("Agency FB", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            linkLabel2.LinkColor = Color.FromArgb(224, 224, 224);
-            linkLabel2.Location = new Point(504, 388);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(79, 17);
-            linkLabel2.TabIndex = 10;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Create new account";
-            linkLabel2.Click += registerClick;
             // 
             // closeBtn
             // 
@@ -214,11 +184,11 @@
             // 
             txtErrUserName.AutoSize = true;
             txtErrUserName.BackColor = SystemColors.ActiveCaptionText;
-            txtErrUserName.Font = new Font("Agency FB", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtErrUserName.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtErrUserName.ForeColor = Color.Red;
             txtErrUserName.Location = new Point(414, 192);
             txtErrUserName.Name = "txtErrUserName";
-            txtErrUserName.Size = new Size(0, 14);
+            txtErrUserName.Size = new Size(0, 13);
             txtErrUserName.TabIndex = 12;
             txtErrUserName.Click += txtErrUserName_Click;
             // 
@@ -226,33 +196,33 @@
             // 
             txtErrPass.AutoSize = true;
             txtErrPass.BackColor = SystemColors.ActiveCaptionText;
-            txtErrPass.Font = new Font("Agency FB", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtErrPass.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtErrPass.ForeColor = Color.Red;
             txtErrPass.Location = new Point(413, 261);
             txtErrPass.Name = "txtErrPass";
-            txtErrPass.Size = new Size(0, 14);
+            txtErrPass.Size = new Size(0, 13);
             txtErrPass.TabIndex = 13;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.BackColor = SystemColors.ActiveCaptionText;
-            label5.Font = new Font("Agency FB", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.Red;
             label5.Location = new Point(400, 230);
             label5.Name = "label5";
-            label5.Size = new Size(0, 14);
+            label5.Size = new Size(0, 13);
             label5.TabIndex = 14;
             // 
             // txtErrInvalid
             // 
             txtErrInvalid.AutoSize = true;
             txtErrInvalid.BackColor = SystemColors.ActiveCaptionText;
-            txtErrInvalid.Font = new Font("Agency FB", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            txtErrInvalid.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             txtErrInvalid.ForeColor = Color.Red;
             txtErrInvalid.Location = new Point(588, 261);
             txtErrInvalid.Name = "txtErrInvalid";
-            txtErrInvalid.Size = new Size(0, 14);
+            txtErrInvalid.Size = new Size(0, 13);
             txtErrInvalid.TabIndex = 15;
             // 
             // LoginForm
@@ -266,8 +236,6 @@
             Controls.Add(txtErrPass);
             Controls.Add(txtErrUserName);
             Controls.Add(closeBtn);
-            Controls.Add(linkLabel2);
-            Controls.Add(linkLabel1);
             Controls.Add(panel2);
             Controls.Add(label4);
             Controls.Add(inputPassword);
@@ -305,8 +273,6 @@
         private Label label4;
         private Panel panel2;
         private TextBox inputPassword;
-        private LinkLabel linkLabel1;
-        private LinkLabel linkLabel2;
         private Button closeBtn;
         private Label txtErrUserName;
         private Label txtErrPass;

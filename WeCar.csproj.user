@@ -16,7 +16,7 @@
     <Compile Update="User Control\carManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="User Control\Customer.cs">
+    <Compile Update="User Control\CustomerManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="User Control\DataManagement.cs">
